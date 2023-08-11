@@ -10,7 +10,7 @@ class MainPage(BasePage):
         # Для перехода между страницами, возвращая нужный Page Object. В методе,
         # который осуществляет переход к странице логина, проинициализировать новый
         # объект Page и вернуть его:
-        return LoginPage(browser=self.browser, url=self.browser.current_url)
+        # return LoginPage(browser=self.browser, url=self.browser.current_url)
         # При создании объекта мы обязательно передаем ему тот же самый объект
         # драйвера для работы с браузером, а в качестве url передаем текущий адрес.
 

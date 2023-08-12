@@ -1,5 +1,5 @@
 from .base_page import BasePage
-from .login_page import LoginPage   # Для перехода между страницами, возвращая нужный Page Object
+#from .login_page import LoginPage   # Для перехода между страницами, возвращая нужный Page Object
 from .locators import MainPageLocators
 
 
@@ -7,7 +7,7 @@ class MainPage(BasePage):
     def go_to_login_page(self):
         link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
         link.click()
-        # Для перехода между страницами, возвращая нужный Page Object. В методе,
+        # Для перехода между страницами, возвращая нужный Page Object,в методе,
         # который осуществляет переход к странице логина, проинициализировать новый
         # объект Page и вернуть его:
         # return LoginPage(browser=self.browser, url=self.browser.current_url)

@@ -1,4 +1,5 @@
 import pytest
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -14,6 +15,7 @@ def browser(request):
     browser = webdriver.Chrome(options=options)
     browser.implicitly_wait(25.0)
     yield browser
+    time.sleep(3)
     browser.quit()
 
 

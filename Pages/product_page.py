@@ -8,6 +8,7 @@ class ProductPage(BasePage):
         basket_button.click()
 
 
+    # название совпадает
     def get_product_in_basket_name(self):
         name_in_basket = self.browser.find_element(*ProductPageLocators.NAME_IN_BASKET)
         return name_in_basket.text
@@ -20,13 +21,7 @@ class ProductPage(BasePage):
         assert name1 == name2, "The product name in the cart doesn't match the selected one"
 
 
-    # def price_should_be_in_basket(self):
-    #     price_in_basket = self.browser.find_element(*ProductPageLocators.PRICE_IN_BASKET)
-    #     product_price = self.browser.find_element(*ProductPageLocators.PRODUCT_PRICE)
-    #     self.browser.execute_script("return arguments[0].scrollIntoView(true);", product_price)
-    #     assert product_price.text == price_in_basket.text, "Basket price doesn't match product price"
-
-
+    # цена совпадает
     def get_product_in_basket_price(self):
         price_in_basket = self.browser.find_element(*ProductPageLocators.PRICE_IN_BASKET)
         return price_in_basket.text
